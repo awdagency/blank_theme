@@ -19,7 +19,7 @@ export const styles = () => {
     .pipe(gulpif(PRODUCTION, cleanCss({compatibility:'ie8'})))
     .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
     .pipe(dest('dist/css'));
-}
+} 
 
 export const copy = () => {
   return src(['src/**/*','!src/{js,scss}','!src/{js,scss}/**/*'])
