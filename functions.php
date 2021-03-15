@@ -15,14 +15,12 @@ function b2b_template_setup() {
     add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails' );
 }
-
 add_action( 'after_setup_theme', 'b2b_template_setup' );
 
 function b2b_template_scripts() { 
 	
-	wp_enqueue_style( 'b2b-style', get_template_directory_uri() . '/dist/css/style.css' );
-    wp_enqueue_style( 'swiper-style', get_template_directory_uri() . '/dist/plugins/swiper.min.css', array(), '1.0.0', 'all' );
-	wp_enqueue_script( 'b2b-transitions', get_template_directory_uri() . '/dist/js/app.js', array(), false, true );
+	wp_enqueue_style( 'b2b-style', get_template_directory_uri() . '/dist/css/bundle.css' );
+	wp_enqueue_script( 'b2b-transitions', get_template_directory_uri() . '/dist/js/bundle.js', array(), false, true );
 
 }
 add_action( 'wp_enqueue_scripts', 'b2b_template_scripts' );
